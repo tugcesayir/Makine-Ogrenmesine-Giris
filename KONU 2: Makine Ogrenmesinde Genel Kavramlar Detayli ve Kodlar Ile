@@ -1,7 +1,9 @@
-Veri öğrenimi, makine öğrenmesi ve veri bilimi alanlarında kullanılan yöntem ve tekniklerin genel adıdır. Veri öğreniminin başlıca üç türü vardır: denetimli öğrenme, denetimsiz öğrenme ve pekiştirmeli öğrenme. Her biri farklı türde veri ve problemler için kullanılır.
+Veri öğrenimi, makine öğrenmesi ve veri bilimi alanlarında kullanılan yöntem ve tekniklerin genel adıdır.
+Veri öğreniminin başlıca üç türü vardır: denetimli öğrenme, denetimsiz öğrenme ve pekiştirmeli öğrenme. Her biri farklı türde veri ve problemler için kullanılır.
 1. Denetimli Öğrenme (Supervised Learning)
 
-Denetimli öğrenme, giriş ve çıkış verilerinin olduğu etiketlenmiş veri setleri üzerinde çalışır. Model, giriş verileri ile doğru çıkışlar arasındaki ilişkiyi öğrenir ve yeni verilere uygulamak üzere genel bir fonksiyon oluşturur.
+Denetimli öğrenme, giriş ve çıkış verilerinin olduğu etiketlenmiş veri setleri üzerinde çalışır. 
+Model, giriş verileri ile doğru çıkışlar arasındaki ilişkiyi öğrenir ve yeni verilere uygulamak üzere genel bir fonksiyon oluşturur.
 Türleri:
 
     Sınıflandırma (Classification): Verileri kategorilere ayırır.
@@ -38,7 +40,8 @@ print(f"Accuracy: {accuracy:.2f}")
 
 2. Denetimsiz Öğrenme (Unsupervised Learning)
 
-Denetimsiz öğrenme, etiketlenmemiş veri üzerinde çalışır ve veri içindeki gizli kalıpları veya yapıları keşfetmeye çalışır. Veriler arasındaki ilişkileri anlamak veya veriyi belirli gruplara ayırmak için kullanılır.
+Denetimsiz öğrenme, etiketlenmemiş veri üzerinde çalışır ve veri içindeki gizli kalıpları veya yapıları keşfetmeye çalışır. 
+Veriler arasındaki ilişkileri anlamak veya veriyi belirli gruplara ayırmak için kullanılır.
 Türleri:
 
     Kümeleme (Clustering): Benzer verileri gruplar.
@@ -73,7 +76,8 @@ plt.show()
 
 3. Pekiştirmeli Öğrenme (Reinforcement Learning)
 
-Pekiştirmeli öğrenme, bir ajanın belirli bir ortamda deneyim yoluyla nasıl hareket edeceğini öğrenmesi üzerine kuruludur. Ajan, ödül (reward) veya ceza (penalty) alarak, gelecekteki hareketlerini en iyi şekilde yönlendirecek bir strateji geliştirir.
+Pekiştirmeli öğrenme, bir ajanın belirli bir ortamda deneyim yoluyla nasıl hareket edeceğini öğrenmesi üzerine kuruludur. 
+Ajan, ödül (reward) veya ceza (penalty) alarak, gelecekteki hareketlerini en iyi şekilde yönlendirecek bir strateji geliştirir.
 Türleri:
 
     Q-Learning: Durum-eylem çiftleri için ödülleri depolar ve en iyi eylemi seçmek için bu ödülleri kullanır.
