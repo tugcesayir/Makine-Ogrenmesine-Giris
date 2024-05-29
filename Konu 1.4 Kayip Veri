@@ -1,0 +1,70 @@
+Kayıp veri, üç ana kategoriye ayrılır:
+
+    Rastgele Kayıp Veri (MCAR - Missing Completely at Random):
+        Verinin kayıp olma olasılığı, gözlemlenen veya gözlemlenmeyen diğer verilerden tamamen bağımsızdır. Örneğin, bir ankette rastgele bazı soruların cevaplanmamış olması.
+
+    Koşullu Kayıp Veri (MAR - Missing at Random):
+        Verinin kayıp olma olasılığı, gözlemlenen diğer verilerle ilişkilidir, ancak kayıp verinin kendisiyle doğrudan ilişkili değildir. Örneğin, yaşlı katılımcıların teknolojiyle ilgili soruları daha az cevaplaması.
+
+    Kayıp Veri Özgü (MNAR - Missing Not at Random):
+        Verinin kayıp olma olasılığı, kayıp verinin kendisiyle ilişkilidir. Örneğin, bir kişinin gelir bilgisini bildirmemesi, gelirinin çok yüksek veya çok düşük olmasından kaynaklanabilir.
+
+Kayıp Verinin Sebepleri
+
+    Anketlerde cevaplanmamış sorular.
+    Ölçüm hataları veya sensör arızaları.
+    Veri giriş hataları.
+    Deneysel veri toplama sürecinde kayıplar.
+
+Kayıp Veri ile Başa Çıkma Yöntemleri
+
+Kayıp veriyi ele almak için çeşitli yöntemler bulunmaktadır. Bu yöntemler, veri setindeki eksik değerlerin türüne ve miktarına bağlı olarak değişir.
+1. Eksik Veriyi Göz Ardı Etme (Deletion)
+
+    Liste Bazlı Silme (Listwise Deletion): Eksik veriye sahip tüm gözlemleri tamamen silmek. Bu yöntem, eksik veri oranı düşük olduğunda ve verilerin MCAR olduğunda uygulanabilir.
+        Örnek: Bir veri setinde 1000 gözlem ve her gözlemde 10 özellik var. Bir gözlemde bir özellik eksikse, o gözlem tamamen silinir.
+
+    Çift Bazlı Silme (Pairwise Deletion): Sadece analiz edilen değişkenler arasındaki eksik veriyi göz ardı etmek. Bu yöntem, daha fazla veri noktası kullanılmasını sağlar.
+        Örnek: Korelasyon matrisi hesaplanırken sadece eksik olmayan çiftler kullanılır.
+
+2. Eksik Veriyi İmpute Etme (Imputation)
+
+    Ortalama/Medyan/Mod İmputasyonu: Eksik değerleri ilgili özelliğin ortalama, medyan veya mod değeri ile doldurmak.
+        Örnek: Yaş değişkeninde eksik değerler, tüm gözlemler için yaşın ortalaması ile doldurulur.
+
+    KNN İmputasyonu: Eksik değerleri, eksik olmayan en yakın komşuların (KNN - K Nearest Neighbors) ortalama değeri ile doldurmak.
+        Örnek: Bir öğrencinin sınav notu eksikse, en yakın özelliklere sahip diğer öğrencilerin notlarının ortalaması ile doldurulur.
+
+    Regresyon İmputasyonu: Eksik değeri, diğer özelliklere dayalı bir regresyon modeli kullanarak tahmin etmek.
+        Örnek: Gelir değişkeni eksikse, yaş, eğitim durumu ve meslek bilgilerine dayalı bir regresyon modeli kullanılarak tahmin edilir.
+
+    Çoklu İmputasyon (Multiple Imputation): Eksik değerler için birden fazla tahmin seti oluşturmak ve bu tahminleri birleştirmek.
+        Örnek: Bir veri setinde eksik değerler için beş farklı imputasyon seti oluşturulur ve analizler bu beş set üzerinde ayrı ayrı yapılır.
+
+3. Gelişmiş Teknikler
+
+    Maksimum Olabilirlik (Maximum Likelihood): Kayıp verileri modelin parametreleri ile uyumlu hale getirerek tahmin etmek.
+    EM Algoritması (Expectation-Maximization): Verilerdeki eksikliği modelleyerek maksimum olabilirlik tahmini yapmak.
+
+Örnek Senaryo: Müşteri Veritabanı
+
+Bir perakende firmasının müşteri veritabanında şu özellikler bulunuyor:
+
+    Müşteri ID
+    Yaş
+    Gelir
+    Cinsiyet
+    Harcama Skoru
+
+Bu veri setinde bazı müşterilerin "Gelir" ve "Yaş" bilgileri eksik olabilir.
+Eksik Veriyi Göz Ardı Etme
+
+    Liste Bazlı Silme: Gelir veya yaş bilgisi eksik olan tüm müşteri kayıtları silinir.
+    Çift Bazlı Silme: Sadece gelir ve yaş bilgileri eksik olmayan çiftler analizde kullanılır.
+
+Eksik Veriyi İmpute Etme
+
+    Ortalama İmputasyonu: Gelir ve yaş için ortalama değerler hesaplanır ve eksik değerler bu ortalama ile doldurulur.
+    KNN İmputasyonu: Eksik gelir ve yaş değerleri, en yakın komşuların ortalaması ile doldurulur.
+    Regresyon İmputasyonu: Gelir ve yaş değerleri, diğer özelliklere dayalı regresyon modelleri ile tahmin edilir.
+
