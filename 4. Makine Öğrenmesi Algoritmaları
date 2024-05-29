@@ -1,0 +1,6 @@
+Lineer Regresyon (Linear Regression): Sürekli değişkenleri tahmin etmek için kullanılan basit bir model.
+Lojistik Regresyon (Logistic Regression): İkili sınıflandırma problemleri için kullanılır.
+Karar Ağaçları (Decision Trees): Verilerin dallara ayrılarak sınıflandırılmasını sağlar.
+Destek Vektör Makineleri (Support Vector Machines): Verileri sınıflandırmak için hiper düzlemler kullanır.
+K-En Yakın Komşu (K-Nearest Neighbors): Verilerin sınıflandırılması için komşu veriler kullanılır.
+Kümeleme Algoritmaları (Clustering Algorithms): K-Means, Hierarchical Clustering gibi algoritmalar verileri doğal gruplara ayırır.
