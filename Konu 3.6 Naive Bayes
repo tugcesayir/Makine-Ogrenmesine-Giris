@@ -1,0 +1,53 @@
+Naive Bayes, sınıflandırma problemlerini çözmek için kullanılan olasılığa dayalı bir denetimli öğrenme algoritmasıdır. Temel olarak, Bayes teoremi prensibine dayanır ve bir veri noktasının bir sınıfa ait olma olasılığını hesaplar. "Naive" (Saf) adı verilir, çünkü algoritma, özellikler arasındaki bağımsızlık varsayımını yapar, yani özelliklerin birbirinden bağımsız olduğunu varsayar.
+Nasıl Çalışır?
+
+    Eğitim: Naive Bayes algoritması, her sınıf için özelliklerin olasılıklarını öğrenir. Bu, her sınıf için her özelliğin olasılığını hesaplayarak yapılır.
+
+    Tahmin: Bir tahmin yapmak istendiğinde, algoritma veri noktasının özelliklerinin olasılıklarını kullanarak Bayes teoremini uygular. Bayes teoremi, belirli bir sınıfa ait olasılığın, veri noktasının belirli özelliklerinin olasılıkları ile koşullu olasılıkların çarpımı olarak hesaplanmasını sağlar. Algoritma, bu işlemi her sınıf için yapar ve en yüksek olasılığa sahip olan sınıfı tahmin olarak seçer.
+
+Avantajlar
+
+    Basit ve hızlı çalışır.
+    Küçük veri setleri üzerinde iyi performans gösterir.
+    Belirli koşullarda, diğer daha karmaşık algoritmaların performansını aşabilir.
+    Küçük bir eğitim seti ile bile iyi sonuçlar verebilir.
+
+Dezavantajlar
+
+    Özellikler arasındaki gerçek bağımlılıkları göz ardı eder, bu nedenle bağımsızlık varsayımı gerçek hayattaki veri setlerinde nadiren gerçekleşir.
+    Eğer eğitim verisi içinde nadir veya hiç gözlenmemiş bir kombinasyon varsa, olasılık hesaplamaları sıfır olabilir. Bu, Laplace düzeltmesi veya diğer düzeltme tekniklerinin kullanılmasını gerektirebilir.
+
+Örnek Uygulama: Naive Bayes ile Spam Filtresi
+
+Spam filtresi, e-posta mesajlarını spam veya spam olmayan olarak sınıflandırmak için Naive Bayes algoritmasının sıkça kullanıldığı bir uygulamadır.
+
+from sklearn.datasets import fetch_20newsgroups
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.metrics import accuracy_score, classification_report
+
+# Veri setini yükle
+newsgroups_train = fetch_20newsgroups(subset='train')
+newsgroups_test = fetch_20newsgroups(subset='test')
+
+# Özellik vektörlerini oluştur
+vectorizer = CountVectorizer()
+X_train = vectorizer.fit_transform(newsgroups_train.data)
+X_test = vectorizer.transform(newsgroups_test.data)
+
+# Modeli oluştur ve eğit
+model = MultinomialNB()
+model.fit(X_train, newsgroups_train.target)
+
+# Test verileri üzerinde tahmin yap
+y_pred = model.predict(X_test)
+
+# Doğruluk skorunu ve sınıflandırma raporunu hesapla
+accuracy = accuracy_score(newsgroups_test.target, y_pred)
+print(f"Accuracy: {accuracy:.2f}")
+
+print("Classification Report:")
+print(classification_report(newsgroups_test.target, y_pred, target_names=newsgroups_test.target_names))
+
+
+Bu örnekte, "fetch_20newsgroups" veri setini kullanarak bir Naive Bayes modeli oluşturuyoruz. Modeli eğittikten sonra test verileri üzerinde tahminler yaparız ve doğruluk skoru ile sınıflandırma raporunu görüntüleriz.
