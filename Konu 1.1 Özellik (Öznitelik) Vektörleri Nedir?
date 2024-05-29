@@ -1,0 +1,55 @@
+Özellik vektörleri, bir veri kümesindeki her bir veri noktasını tanımlayan özniteliklerin bir araya gelmesiyle oluşur. Öznitelikler, verinin anlamlı ve analiz edilebilir hale gelmesini sağlar. Bu öznitelikler sayısal, kategorik veya metinsel olabilir, ancak makine öğrenmesi algoritmaları genellikle sayısal verilere ihtiyaç duyar, bu nedenle kategorik ve metinsel veriler de sayısal forma dönüştürülür.
+Örnekler ile Açıklama
+Örnek 1: Konut Fiyat Tahmini
+
+Bir emlak veri setinde, her bir ev için bazı öznitelikler olabilir:
+
+    Metrekare
+    Oda sayısı
+    Yaş
+    Semt
+
+Bu özellikler kullanılarak bir evin fiyatını tahmin eden bir model oluşturulabilir. Örneğin, aşağıdaki veri noktası bir özellik vektörü olarak ifade edilebilir:
+
+Metrekare	OdaSayısı	Yaş	Semt
+120	       3	      10	 2
+
+Bu özellik vektörü, [120, 3, 10, 2] şeklinde gösterilebilir. Burada "Semt" özniteliği sayısallaştırılmıştır (örneğin, "Semt 1", "Semt 2" gibi).
+Örnek 2: Müşteri Segmentasyonu
+
+Bir e-ticaret sitesinde müşteri segmentasyonu yapmak için bazı öznitelikler kullanılabilir:
+
+    Yaş
+    Yıllık Gelir
+    Harcama Skoru (1-100 arasında)
+
+Bir müşterinin özellik vektörü şu şekilde olabilir:
+
+Yaş	Yıllık Gelir	Harcama Skoru
+ 35	  75000	           80
+
+Bu özellik vektörü, [35, 75000, 80] olarak ifade edilir.
+Örnek 3: Metin Sınıflandırma
+
+Bir metin sınıflandırma problemi için her bir metin belgesi, kelime frekansları veya TF-IDF (Term Frequency-Inverse Document Frequency) değerleri ile temsil edilebilir. Örneğin, iki kelimelik bir belge koleksiyonunda "Kedi" ve "Köpek" kelimeleri kullanıldığında, bir belgenin özellik vektörü şu şekilde olabilir:
+Kedi	Köpek
+  3	    1
+
+Bu özellik vektörü, [3, 1] olarak ifade edilir, burada 3 "Kedi" kelimesinin frekansı, 1 ise "Köpek" kelimesinin frekansıdır.
+Örnek 4: Görüntü Tanıma
+
+Bir görüntü tanıma probleminde, her bir görüntü piksel değerleri ile temsil edilir. Siyah-beyaz bir görüntüde her bir piksel değeri 0 ile 255 arasında olabilir. Örneğin, 2x2 piksel boyutunda bir görüntü şu şekilde olabilir:
+Piksel 1	Piksel 2	Piksel 3	Piksel 4
+ 34	        78	     192	     255
+
+Bu özellik vektörü, [34, 78, 192, 255] olarak ifade edilir.
+Özellik Vektörleri Nasıl Kullanılır?
+
+Özellik vektörleri, makine öğrenmesi modellerinin temelidir. Model eğitimi sırasında, algoritma bu vektörleri kullanarak verilerdeki kalıpları ve ilişkileri öğrenir. Tahmin aşamasında ise, yeni veri noktaları aynı özellik formatında modele verilir ve modelin tahmin yapması sağlanır.
+
+Örneğin:
+
+    Denetimli Öğrenme: Bir model eğitim verilerindeki özellik vektörlerini kullanarak öğrenir ve hedef değişkenleri tahmin eder.
+    Denetimsiz Öğrenme: Bir model özellik vektörlerini kullanarak veri kümelerinde gizli kalıpları keşfeder (örneğin, kümeleme).
+
+Özellik vektörlerinin doğru seçimi ve hazırlanması, modelin performansını doğrudan etkiler. Bu nedenle özellik mühendisliği, makine öğrenmesi projelerinde kritik bir adımdır.
