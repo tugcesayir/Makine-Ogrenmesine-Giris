@@ -1,7 +1,11 @@
-Karar ağaçları, sınıflandırma ve regresyon problemlerini çözmek için kullanılan denetimli öğrenme algoritmalarıdır. Veri setindeki özelliklerin değerlerine göre karar düğümleri oluşturarak veri kümesini bir ağaç yapısı içinde sınıflandırırlar. Karar ağaçları, anlaşılması kolay ve yorumlanması basit modeller üretirler, bu nedenle birçok uygulamada tercih edilirler.
+Karar ağaçları, sınıflandırma ve regresyon problemlerini çözmek için kullanılan denetimli öğrenme algoritmalarıdır.
+Veri setindeki özelliklerin değerlerine göre karar düğümleri oluşturarak veri kümesini bir ağaç yapısı içinde sınıflandırırlar.
+Karar ağaçları, anlaşılması kolay ve yorumlanması basit modeller üretirler, bu nedenle birçok uygulamada tercih edilirler.
 Karar Ağacı Oluşturma
 
-Karar ağaçları, bir kök düğümden başlayarak veri setindeki özelliklere göre sıralı kararlar alır. Her bir karar düğümü, bir özellik ve bu özelliğin değerine göre bir dallanma noktası içerir. Veri kümesi, her karar düğümünde belirli bir kurala göre bölünür ve sonunda yaprak düğümleri oluşur. Yaprak düğümleri, bir sınıfa veya bir sayısal değere karşılık gelir ve veri noktalarını bu sınıflara veya değerlere atar.
+Karar ağaçları, bir kök düğümden başlayarak veri setindeki özelliklere göre sıralı kararlar alır.
+Her bir karar düğümü, bir özellik ve bu özelliğin değerine göre bir dallanma noktası içerir. Veri kümesi, her karar düğümünde belirli bir kurala göre bölünür ve sonunda yaprak düğümleri oluşur. 
+Yaprak düğümleri, bir sınıfa veya bir sayısal değere karşılık gelir ve veri noktalarını bu sınıflara veya değerlere atar.
 Avantajlar
 
     Anlaşılması kolaydır ve yorumlanması basittir.
@@ -55,4 +59,6 @@ plot_tree(model, filled=True, feature_names=iris.feature_names, class_names=iris
 plt.show()
 
 
-Bu örnekte, "Iris" veri setini kullanarak bir karar ağacı modeli oluşturuyoruz. Modeli eğittikten sonra test verileri üzerinde tahminler yaparız ve doğruluk skoru ile sınıflandırma raporunu görüntüleriz. Son olarak, oluşturulan karar ağacını görselleştirerek, veri setindeki karar sürecini anlamamıza yardımcı olur.
+Bu örnekte, "Iris" veri setini kullanarak bir karar ağacı modeli oluşturuyoruz. 
+Modeli eğittikten sonra test verileri üzerinde tahminler yaparız ve doğruluk skoru ile sınıflandırma raporunu görüntüleriz. 
+Son olarak, oluşturulan karar ağacını görselleştirerek, veri setindeki karar sürecini anlamamıza yardımcı olur.
