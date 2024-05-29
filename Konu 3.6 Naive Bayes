@@ -1,9 +1,14 @@
-Naive Bayes, sınıflandırma problemlerini çözmek için kullanılan olasılığa dayalı bir denetimli öğrenme algoritmasıdır. Temel olarak, Bayes teoremi prensibine dayanır ve bir veri noktasının bir sınıfa ait olma olasılığını hesaplar. "Naive" (Saf) adı verilir, çünkü algoritma, özellikler arasındaki bağımsızlık varsayımını yapar, yani özelliklerin birbirinden bağımsız olduğunu varsayar.
+Naive Bayes, sınıflandırma problemlerini çözmek için kullanılan olasılığa dayalı bir denetimli öğrenme algoritmasıdır. 
+Temel olarak, Bayes teoremi prensibine dayanır ve bir veri noktasının bir sınıfa ait olma olasılığını hesaplar. 
+"Naive" (Saf) adı verilir, çünkü algoritma, özellikler arasındaki bağımsızlık varsayımını yapar, yani özelliklerin birbirinden bağımsız olduğunu varsayar.
+
 Nasıl Çalışır?
 
     Eğitim: Naive Bayes algoritması, her sınıf için özelliklerin olasılıklarını öğrenir. Bu, her sınıf için her özelliğin olasılığını hesaplayarak yapılır.
 
-    Tahmin: Bir tahmin yapmak istendiğinde, algoritma veri noktasının özelliklerinin olasılıklarını kullanarak Bayes teoremini uygular. Bayes teoremi, belirli bir sınıfa ait olasılığın, veri noktasının belirli özelliklerinin olasılıkları ile koşullu olasılıkların çarpımı olarak hesaplanmasını sağlar. Algoritma, bu işlemi her sınıf için yapar ve en yüksek olasılığa sahip olan sınıfı tahmin olarak seçer.
+    Tahmin: Bir tahmin yapmak istendiğinde, algoritma veri noktasının özelliklerinin olasılıklarını kullanarak Bayes teoremini uygular. 
+Bayes teoremi, belirli bir sınıfa ait olasılığın, veri noktasının belirli özelliklerinin olasılıkları ile koşullu olasılıkların çarpımı olarak hesaplanmasını sağlar. 
+Algoritma, bu işlemi her sınıf için yapar ve en yüksek olasılığa sahip olan sınıfı tahmin olarak seçer.
 
 Avantajlar
 
@@ -15,7 +20,8 @@ Avantajlar
 Dezavantajlar
 
     Özellikler arasındaki gerçek bağımlılıkları göz ardı eder, bu nedenle bağımsızlık varsayımı gerçek hayattaki veri setlerinde nadiren gerçekleşir.
-    Eğer eğitim verisi içinde nadir veya hiç gözlenmemiş bir kombinasyon varsa, olasılık hesaplamaları sıfır olabilir. Bu, Laplace düzeltmesi veya diğer düzeltme tekniklerinin kullanılmasını gerektirebilir.
+    Eğer eğitim verisi içinde nadir veya hiç gözlenmemiş bir kombinasyon varsa, olasılık hesaplamaları sıfır olabilir. 
+    Bu, Laplace düzeltmesi veya diğer düzeltme tekniklerinin kullanılmasını gerektirebilir.
 
 Örnek Uygulama: Naive Bayes ile Spam Filtresi
 
@@ -50,4 +56,5 @@ print("Classification Report:")
 print(classification_report(newsgroups_test.target, y_pred, target_names=newsgroups_test.target_names))
 
 
-Bu örnekte, "fetch_20newsgroups" veri setini kullanarak bir Naive Bayes modeli oluşturuyoruz. Modeli eğittikten sonra test verileri üzerinde tahminler yaparız ve doğruluk skoru ile sınıflandırma raporunu görüntüleriz.
+Bu örnekte, "fetch_20newsgroups" veri setini kullanarak bir Naive Bayes modeli oluşturuyoruz.
+Modeli eğittikten sonra test verileri üzerinde tahminler yaparız ve doğruluk skoru ile sınıflandırma raporunu görüntüleriz.
