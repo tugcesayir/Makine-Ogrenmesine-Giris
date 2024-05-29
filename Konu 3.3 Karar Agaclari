@@ -1,0 +1,58 @@
+Karar ağaçları, sınıflandırma ve regresyon problemlerini çözmek için kullanılan denetimli öğrenme algoritmalarıdır. Veri setindeki özelliklerin değerlerine göre karar düğümleri oluşturarak veri kümesini bir ağaç yapısı içinde sınıflandırırlar. Karar ağaçları, anlaşılması kolay ve yorumlanması basit modeller üretirler, bu nedenle birçok uygulamada tercih edilirler.
+Karar Ağacı Oluşturma
+
+Karar ağaçları, bir kök düğümden başlayarak veri setindeki özelliklere göre sıralı kararlar alır. Her bir karar düğümü, bir özellik ve bu özelliğin değerine göre bir dallanma noktası içerir. Veri kümesi, her karar düğümünde belirli bir kurala göre bölünür ve sonunda yaprak düğümleri oluşur. Yaprak düğümleri, bir sınıfa veya bir sayısal değere karşılık gelir ve veri noktalarını bu sınıflara veya değerlere atar.
+Avantajlar
+
+    Anlaşılması kolaydır ve yorumlanması basittir.
+    Hem sınıflandırma hem de regresyon problemleri için kullanılabilir.
+    Çok büyük veri setleri üzerinde bile hızlı çalışabilir.
+    Özellikler arasındaki ilişkileri ve etkileri belirlemeye yardımcı olabilir.
+
+Dezavantajlar
+
+    Tek bir karar ağacı genellikle karmaşık ilişkileri ifade etmekte yetersiz kalabilir.
+    Eğitim verisi üzerinde aşırı uydurma (overfitting) eğilimi gösterebilir.
+    Bazı veri setleri için aşırı derecede dengesiz ağaçlar oluşturabilir.
+
+Örnek Uygulama: Karar Ağacı ile İris Veri Seti Sınıflandırması
+
+"Iris" veri setindeki çiçek türlerini belirlemek için karar ağacı kullanacağız.
+
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.metrics import accuracy_score, classification_report
+import matplotlib.pyplot as plt
+from sklearn.tree import plot_tree
+
+# Veri setini yükle
+iris = load_iris()
+X = iris.data
+y = iris.target
+
+# Veriyi eğitim ve test olarak böl
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Modeli oluştur ve eğit
+model = DecisionTreeClassifier()
+model.fit(X_train, y_train)
+
+# Test verileri üzerinde tahmin yap
+y_pred = model.predict(X_test)
+
+# Doğruluk skorunu hesapla
+accuracy = accuracy_score(y_test, y_pred)
+print(f"Accuracy: {accuracy:.2f}")
+
+# Sınıflandırma raporunu yazdır
+print("Classification Report:")
+print(classification_report(y_test, y_pred))
+
+# Karar ağacını görselleştir
+plt.figure(figsize=(15,10))
+plot_tree(model, filled=True, feature_names=iris.feature_names, class_names=iris.target_names)
+plt.show()
+
+
+Bu örnekte, "Iris" veri setini kullanarak bir karar ağacı modeli oluşturuyoruz. Modeli eğittikten sonra test verileri üzerinde tahminler yaparız ve doğruluk skoru ile sınıflandırma raporunu görüntüleriz. Son olarak, oluşturulan karar ağacını görselleştirerek, veri setindeki karar sürecini anlamamıza yardımcı olur.
