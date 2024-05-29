@@ -1,7 +1,10 @@
-Veri tabanı yöntemleri, verilerin saklanması, yönetilmesi, sorgulanması ve manipüle edilmesi için kullanılan çeşitli teknikler ve teknolojilerdir. Bu yöntemler, veri tabanı yönetim sistemleri (DBMS - Database Management Systems) tarafından sağlanır ve verilerin verimli ve güvenli bir şekilde yönetilmesini sağlar. Veri tabanı yöntemleri, genellikle ilişkisel veri tabanları, NoSQL veri tabanları, nesne yönelimli veri tabanları ve veri ambarları gibi kategorilere ayrılır.
+Veri tabanı yöntemleri, verilerin saklanması, yönetilmesi, sorgulanması ve manipüle edilmesi için kullanılan çeşitli teknikler ve teknolojilerdir. 
+Bu yöntemler, veri tabanı yönetim sistemleri (DBMS - Database Management Systems) tarafından sağlanır ve verilerin verimli ve güvenli bir şekilde yönetilmesini sağlar. 
+Veri tabanı yöntemleri, genellikle ilişkisel veri tabanları, NoSQL veri tabanları, nesne yönelimli veri tabanları ve veri ambarları gibi kategorilere ayrılır.
 1. İlişkisel Veri Tabanları (RDBMS)
 
-İlişkisel veri tabanları, verilerin tablo şeklinde organize edildiği ve veriler arasındaki ilişkilerin anahtarlar aracılığıyla tanımlandığı veri tabanlarıdır. SQL (Structured Query Language) kullanılarak veriler üzerinde işlem yapılır.
+İlişkisel veri tabanları, verilerin tablo şeklinde organize edildiği ve veriler arasındaki ilişkilerin anahtarlar aracılığıyla tanımlandığı veri tabanlarıdır. 
+SQL (Structured Query Language) kullanılarak veriler üzerinde işlem yapılır.
 Örnekler:
 
     MySQL: Açık kaynaklı bir ilişkisel veri tabanı yönetim sistemi. Kullanımı kolaydır ve küçük ile orta ölçekli uygulamalar için idealdir.
@@ -16,7 +19,8 @@ Kullanım Alanları:
 
 2. NoSQL Veri Tabanları
 
-NoSQL veri tabanları, esnek veri modelleri ve yüksek performans gerektiren uygulamalar için tasarlanmıştır. NoSQL veri tabanları, dört ana kategoriye ayrılır: belge tabanlı, anahtar-değer tabanlı, sütun tabanlı ve grafik tabanlı veri tabanları.
+NoSQL veri tabanları, esnek veri modelleri ve yüksek performans gerektiren uygulamalar için tasarlanmıştır.
+NoSQL veri tabanları, dört ana kategoriye ayrılır: belge tabanlı, anahtar-değer tabanlı, sütun tabanlı ve grafik tabanlı veri tabanları.
 Örnekler:
 
     MongoDB: Belge tabanlı NoSQL veri tabanı. Veriler, JSON benzeri belgeler halinde saklanır.
@@ -33,7 +37,8 @@ Kullanım Alanları:
 
 3. Nesne Yönelimli Veri Tabanları
 
-Nesne yönelimli veri tabanları, verileri nesne yönelimli programlama (OOP) paradigmasına uygun şekilde saklar. Veriler, nesneler olarak temsil edilir ve nesne sınıfları, kalıtım ve çok biçimlilik gibi OOP özelliklerini destekler.
+Nesne yönelimli veri tabanları, verileri nesne yönelimli programlama (OOP) paradigmasına uygun şekilde saklar. 
+Veriler, nesneler olarak temsil edilir ve nesne sınıfları, kalıtım ve çok biçimlilik gibi OOP özelliklerini destekler.
 Örnekler:
 
     ObjectDB: Java programlama dili için nesne yönelimli bir veri tabanı.
@@ -78,4 +83,5 @@ Kullanım Alanları:
         Amazon Redshift kullanarak satış verilerini tarihsel olarak saklamak ve iş zekası araçları ile analiz etmek.
         Örneğin, SELECT product_id, SUM(quantity) FROM sales GROUP BY product_id sorgusu ile en çok satan ürünlerin analizi yapılabilir.
 
-Veri tabanı yöntemleri, verilerin yapısına, uygulamanın gereksinimlerine ve performans ihtiyaçlarına göre seçilerek kullanılır. Bu yöntemlerin doğru kullanımı, veri yönetimi süreçlerini optimize eder ve iş süreçlerinin verimliliğini artırır.
+Veri tabanı yöntemleri, verilerin yapısına, uygulamanın gereksinimlerine ve performans ihtiyaçlarına göre seçilerek kullanılır. 
+Bu yöntemlerin doğru kullanımı, veri yönetimi süreçlerini optimize eder ve iş süreçlerinin verimliliğini artırır.
