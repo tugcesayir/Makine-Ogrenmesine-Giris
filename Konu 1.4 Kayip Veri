@@ -4,7 +4,8 @@ Kayıp veri, üç ana kategoriye ayrılır:
         Verinin kayıp olma olasılığı, gözlemlenen veya gözlemlenmeyen diğer verilerden tamamen bağımsızdır. Örneğin, bir ankette rastgele bazı soruların cevaplanmamış olması.
 
     Koşullu Kayıp Veri (MAR - Missing at Random):
-        Verinin kayıp olma olasılığı, gözlemlenen diğer verilerle ilişkilidir, ancak kayıp verinin kendisiyle doğrudan ilişkili değildir. Örneğin, yaşlı katılımcıların teknolojiyle ilgili soruları daha az cevaplaması.
+        Verinin kayıp olma olasılığı, gözlemlenen diğer verilerle ilişkilidir, ancak kayıp verinin kendisiyle doğrudan ilişkili değildir. 
+Örneğin, yaşlı katılımcıların teknolojiyle ilgili soruları daha az cevaplaması.
 
     Kayıp Veri Özgü (MNAR - Missing Not at Random):
         Verinin kayıp olma olasılığı, kayıp verinin kendisiyle ilişkilidir. Örneğin, bir kişinin gelir bilgisini bildirmemesi, gelirinin çok yüksek veya çok düşük olmasından kaynaklanabilir.
