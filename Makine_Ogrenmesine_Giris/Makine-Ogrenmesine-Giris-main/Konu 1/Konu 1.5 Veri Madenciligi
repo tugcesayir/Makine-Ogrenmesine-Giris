@@ -1,0 +1,70 @@
+Veri Madenciliği Nedir?
+
+Veri madenciliği, büyük veri setlerinde gizli kalıpları, ilişkileri ve bilgileri keşfetmek amacıyla kullanılan bir dizi süreç ve tekniklerin bütünüdür. 
+Bu teknikler, ham veriyi değerli bilgilere dönüştürerek, çeşitli alanlarda stratejik kararların alınmasını sağlar. 
+Veri madenciliği, veri tabanı yönetimi, istatistik, yapay zeka ve makine öğrenmesi gibi disiplinlerden yöntemler kullanır.
+Veri Madenciliği Süreci
+
+Veri madenciliği süreci genellikle şu adımlardan oluşur:
+
+    Veri Toplama ve Hazırlama:
+        Verinin toplanması, temizlenmesi ve analiz için uygun hale getirilmesi. Verideki eksik veya hatalı bilgiler düzeltilir.
+    Veri Keşfi ve Dönüştürme:
+        Verinin anlaşılması, özelliklerin seçimi ve gerekli dönüşümlerin yapılması. Özellik mühendisliği ve boyut indirgeme gibi işlemler yapılır.
+    Modelleme:
+        Veriye uygun algoritmalar seçilir ve modeller oluşturulur. Bu aşamada, çeşitli makine öğrenmesi ve istatistiksel teknikler kullanılır.
+    Model Değerlendirme:
+        Modellerin doğruluğu ve performansı test edilir. K-cross validation gibi yöntemlerle modellerin güvenilirliği ölçülür.
+    Bilgi Sunumu:
+        Elde edilen bilgilerin görselleştirilmesi ve raporlanması. Bu adım, karar alıcıların sonuçları anlamasını sağlar.
+
+Veri Madenciliği Teknikleri
+
+Veri madenciliğinde kullanılan bazı yaygın teknikler şunlardır:
+
+    Sınıflandırma (Classification): Veriyi önceden belirlenmiş kategorilere ayırmak için kullanılır. Örneğin, kredi başvurularının onaylanıp onaylanmayacağını tahmin etmek.
+
+    Kümeleme (Clustering): Benzer veri noktalarını gruplara ayırmak için kullanılır. Örneğin, müşterileri benzer alışveriş alışkanlıklarına göre gruplandırmak.
+
+    Regresyon (Regression): Sürekli bir hedef değişkeni tahmin etmek için kullanılır. Örneğin, ev fiyatlarını tahmin etmek.
+
+    Bağlantı Analizi (Association Analysis): Verideki öğeler arasındaki ilişkileri keşfetmek için kullanılır. Örneğin, market sepeti analizinde birlikte satın alınan ürünleri bulmak.
+
+    Anomali Tespiti (Anomaly Detection): Norm dışı veya sıra dışı veri noktalarını tespit etmek için kullanılır. Örneğin, kredi kartı sahtekarlığını tespit etmek.
+
+Örneklerle Veri Madenciliği
+Örnek 1: Market Sepeti Analizi
+
+Bir süpermarket, müşterilerinin alışveriş alışkanlıklarını analiz etmek istiyor. Market sepeti analizini kullanarak, müşterilerin hangi ürünleri birlikte satın aldığını keşfedebilirler.
+
+Yöntem: Apriori Algoritması
+
+    Market sepeti verilerini kullanarak, sıkça birlikte satın alınan ürün çiftlerini belirlemek.
+    Örneğin, "Ekmek" ve "Süt" ürünlerinin sıkça birlikte alındığı tespit edilirse, bu ürünler yan yana yerleştirilerek satışlar artırılabilir.
+
+Örnek 2: Müşteri Segmentasyonu
+
+Bir e-ticaret firması, müşteri segmentasyonu yaparak pazarlama stratejilerini geliştirmek istiyor. Kümeleme algoritmaları kullanarak, benzer özelliklere sahip müşterileri gruplandırabilirler.
+
+Yöntem: K-Means Kümeleme
+
+    Müşteri verilerini kullanarak, "Yaş", "Gelir", "Harcama Skoru" gibi özelliklere göre müşterileri segmentlere ayırmak.
+    Örneğin, "Yüksek Gelirli ve Düşük Harcama", "Orta Gelirli ve Yüksek Harcama" gibi segmentler oluşturulabilir. Bu segmentler, hedeflenmiş pazarlama kampanyaları oluşturmak için kullanılabilir.
+
+Örnek 3: Kredi Riski Değerlendirme
+
+Bir banka, kredi başvurularını değerlendirirken kredi riskini tahmin etmek istiyor. Sınıflandırma algoritmaları kullanarak, başvuruların onaylanıp onaylanmayacağını tahmin edebilirler.
+
+Yöntem: Karar Ağaçları
+
+    Geçmiş kredi başvuruları ve sonuçlarını kullanarak, kredi başvurularını onaylama veya reddetme kararlarını öğrenmek.
+    Örneğin, başvuru sahibinin "Gelir", "Kredi Skoru", "Borç Durumu" gibi bilgileri kullanılarak, başvurunun onaylanma olasılığı tahmin edilebilir.
+
+Örnek 4: Tahmin Edici Bakım
+
+Bir üretim şirketi, makine arızalarını önceden tahmin ederek bakım maliyetlerini azaltmak istiyor. Regresyon ve anomali tespiti tekniklerini kullanarak, makine arızalarını tahmin edebilirler.
+
+Yöntem: Zaman Serisi Analizi
+
+    Makine sensör verilerini kullanarak, arızaların ne zaman meydana geleceğini tahmin etmek.
+    Örneğin, titreşim verileri analiz edilerek, belirli bir seviyeyi aşan titreşimlerin makine arızasına işaret ettiği tespit edilebilir.

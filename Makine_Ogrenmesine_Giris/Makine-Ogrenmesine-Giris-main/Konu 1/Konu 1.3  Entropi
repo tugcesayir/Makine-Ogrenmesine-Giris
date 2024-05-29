@@ -1,0 +1,81 @@
+Entropi, bilgi teorisinde ve makine öğrenmesinde, bir veri kümesindeki belirsizlik veya düzensizliğin ölçüsüdür. 
+Claude Shannon tarafından geliştirilen bu kavram, özellikle sınıflandırma problemlerinde karar ağaçları gibi algoritmalarda sıkça kullanılır.
+
+### Entropi Nedir?
+
+Entropi, bir veri kümesindeki bilgi miktarını veya veri kümesinin ne kadar düzensiz olduğunu ölçer. 
+Entropi değeri, verinin homojen olup olmadığını anlamamıza yardımcı olur. 
+Yüksek entropi, verinin çok düzensiz olduğunu ve bilgiyi iyi ayırt edemediğimizi gösterirken, düşük entropi, verinin daha düzenli ve daha tahmin edilebilir olduğunu gösterir.
+
+Entropi formülü şu şekildedir:
+
+\[ H(X) = - \sum_{i=1}^{n} P(x_i) \log_2 P(x_i) \]
+
+Burada:
+- \( H(X) \): Rastgele değişken \( X \) için entropi
+- \( P(x_i) \): \( X \) rastgele değişkeninin \( x_i \) değerini alma olasılığı
+- \( \log_2 \): İkili (binary) logaritma
+
+### Örnekler ile Entropi
+
+#### Örnek 1: Sınıflandırma Problemi
+Bir sınıflandırma problemi düşünelim, burada elimizde "A" ve "B" olmak üzere iki sınıf var.
+
+##### Durum 1: Homojen Dağılım
+Veri setimizde 8 veri noktası var ve hepsi sınıf "A"ya ait:
+\[ \{A, A, A, A, A, A, A, A\} \]
+
+Bu durumda, entropi şu şekilde hesaplanır:
+\[ P(A) = 1, \, P(B) = 0 \]
+\[ H(X) = - (1 \log_2 1 + 0 \log_2 0) = 0 \]
+
+Entropi 0’dır, çünkü belirsizlik yoktur; tüm veri noktaları aynı sınıfa aittir.
+
+##### Durum 2: Karışık Dağılım
+Veri setimizde 8 veri noktası var ve bunların 4'ü "A", 4'ü "B" sınıfına ait:
+\[ \{A, A, A, A, B, B, B, B\} \]
+
+Bu durumda, entropi şu şekilde hesaplanır:
+\[ P(A) = 0.5, \, P(B) = 0.5 \]
+\[ H(X) = - (0.5 \log_2 0.5 + 0.5 \log_2 0.5) = - (0.5 \times -1 + 0.5 \times -1) = 1 \]
+
+Entropi 1’dir, çünkü veri noktaları tamamen karışık ve belirsizdir.
+
+#### Örnek 2: Karar Ağaçları
+Karar ağaçlarında entropi, düğümleri bölmek için kullanılan önemli bir ölçüttür. Amaç, entropiyi minimize ederek daha saf (homojen) alt kümeler elde etmektir.
+
+Bir örnekle açıklayalım:
+- 10 veri noktası var: 6'sı "Evet" (pozitif), 4'ü "Hayır" (negatif).
+
+Başlangıç entropisini hesaplayalım:
+\[ P(Evet) = 0.6, \, P(Hayır) = 0.4 \]
+\[ H(X) = - (0.6 \log_2 0.6 + 0.4 \log_2 0.4) \]
+\[ H(X) = - (0.6 \times -0.737 + 0.4 \times -1.321) \]
+\[ H(X) = 0.971 \]
+
+Bir özellik üzerinden bölme yapalım: Örneğin, "Yaş" özelliğine göre bölme.
+
+**Bölme Sonrası:**
+- **Genç:** 4 "Evet", 2 "Hayır"
+- **Orta yaşlı:** 2 "Evet", 2 "Hayır"
+- **Yaşlı:** 0 "Evet", 2 "Hayır"
+
+Her alt kümenin entropisini hesaplayalım:
+- **Genç:**
+  \[ H(Genç) = - (0.67 \log_2 0.67 + 0.33 \log_2 0.33) = 0.918 \]
+
+- **Orta yaşlı:**
+  \[ H(Orta yaşlı) = - (0.5 \log_2 0.5 + 0.5 \log_2 0.5) = 1 \]
+
+- **Yaşlı:**
+  \[ H(Yaşlı) = - (0 \log_2 0 + 1 \log_2 1) = 0 \]
+
+Bölme sonrası toplam entropiyi hesaplayalım:
+\[ H(bölme) = \frac{6}{10} \times 0.918 + \frac{4}{10} \times 0.5 \times 1 = 0.751 \]
+
+Bölme sonrası entropi (0.751), başlangıç entropisinden (0.971) düşüktür, bu da daha saf alt kümeler elde ettiğimiz anlamına gelir.
+
+### Sonuç
+Entropi, veri kümesinin ne kadar belirsiz veya düzenli olduğunu anlamamıza yardımcı olan önemli bir ölçüttür.
+Karar ağaçları gibi algoritmalarda, entropi kullanılarak verinin bölünmesi ve daha homojen alt kümeler elde edilmesi sağlanır.
+Bu, modelin daha doğru tahminler yapmasını ve daha iyi performans göstermesini sağlar.

@@ -1,0 +1,87 @@
+Veri tabanı yöntemleri, verilerin saklanması, yönetilmesi, sorgulanması ve manipüle edilmesi için kullanılan çeşitli teknikler ve teknolojilerdir. 
+Bu yöntemler, veri tabanı yönetim sistemleri (DBMS - Database Management Systems) tarafından sağlanır ve verilerin verimli ve güvenli bir şekilde yönetilmesini sağlar. 
+Veri tabanı yöntemleri, genellikle ilişkisel veri tabanları, NoSQL veri tabanları, nesne yönelimli veri tabanları ve veri ambarları gibi kategorilere ayrılır.
+1. İlişkisel Veri Tabanları (RDBMS)
+
+İlişkisel veri tabanları, verilerin tablo şeklinde organize edildiği ve veriler arasındaki ilişkilerin anahtarlar aracılığıyla tanımlandığı veri tabanlarıdır. 
+SQL (Structured Query Language) kullanılarak veriler üzerinde işlem yapılır.
+Örnekler:
+
+    MySQL: Açık kaynaklı bir ilişkisel veri tabanı yönetim sistemi. Kullanımı kolaydır ve küçük ile orta ölçekli uygulamalar için idealdir.
+    PostgreSQL: Gelişmiş özelliklere sahip açık kaynaklı bir ilişkisel veri tabanı yönetim sistemi. Karmaşık sorgular ve işlemler için uygundur.
+    Oracle Database: Kurumsal düzeyde özelliklere sahip ticari bir ilişkisel veri tabanı yönetim sistemi. Büyük ölçekli uygulamalar ve veri yönetimi için kullanılır.
+
+Kullanım Alanları:
+
+    E-ticaret siteleri (müşteri, ürün, sipariş yönetimi)
+    Bankacılık sistemleri (hesap, işlem, müşteri bilgileri)
+    Kurumsal kaynak planlama (ERP) sistemleri
+
+2. NoSQL Veri Tabanları
+
+NoSQL veri tabanları, esnek veri modelleri ve yüksek performans gerektiren uygulamalar için tasarlanmıştır.
+NoSQL veri tabanları, dört ana kategoriye ayrılır: belge tabanlı, anahtar-değer tabanlı, sütun tabanlı ve grafik tabanlı veri tabanları.
+Örnekler:
+
+    MongoDB: Belge tabanlı NoSQL veri tabanı. Veriler, JSON benzeri belgeler halinde saklanır.
+    Redis: Anahtar-değer tabanlı NoSQL veri tabanı. Yüksek performans ve düşük gecikme süresi sunar.
+    Cassandra: Sütun tabanlı NoSQL veri tabanı. Yüksek ölçeklenebilirlik ve veri çoğaltma özelliklerine sahiptir.
+    Neo4j: Grafik tabanlı NoSQL veri tabanı. Veri noktaları arasındaki ilişkileri grafik yapısında saklar ve sorgular.
+
+Kullanım Alanları:
+
+    Gerçek zamanlı veri analizi
+    Büyük veri uygulamaları
+    Sosyal ağlar (kullanıcı ilişkileri, etkileşimler)
+    İçerik yönetim sistemleri
+
+3. Nesne Yönelimli Veri Tabanları
+
+Nesne yönelimli veri tabanları, verileri nesne yönelimli programlama (OOP) paradigmasına uygun şekilde saklar. 
+Veriler, nesneler olarak temsil edilir ve nesne sınıfları, kalıtım ve çok biçimlilik gibi OOP özelliklerini destekler.
+Örnekler:
+
+    ObjectDB: Java programlama dili için nesne yönelimli bir veri tabanı.
+    db4o: Açık kaynaklı bir nesne yönelimli veri tabanı. Java ve .NET uygulamaları için uygundur.
+
+Kullanım Alanları:
+
+    Mühendislik ve tasarım uygulamaları
+    OOP paradigmasına dayalı yazılım geliştirme projeleri
+
+4. Veri Ambarları
+
+Veri ambarları, büyük miktarda tarihsel veriyi toplamak, saklamak ve analiz etmek için kullanılan özel veri tabanlarıdır. Veri ambarları, iş zekası ve veri analitiği uygulamalarında kullanılır.
+Örnekler:
+
+    Amazon Redshift: Amazon Web Services (AWS) tarafından sunulan bir veri ambarı hizmeti.
+    Google BigQuery: Google Cloud Platform (GCP) üzerinde çalışan, büyük veri analitiği için kullanılan bir veri ambarı hizmeti.
+    Snowflake: Bulut tabanlı veri ambarı hizmeti, yüksek performans ve ölçeklenebilirlik sunar.
+
+Kullanım Alanları:
+
+    İş zekası (BI) ve raporlama
+    Veri analitiği ve büyük veri analizi
+    Tarihsel veri depolama ve analizi
+
+Özet ve Örnek Senaryo
+Örnek Senaryo: Bir E-Ticaret Platformu İçin Veri Yönetimi
+
+    İlişkisel Veri Tabanı Kullanımı:
+        MySQL kullanarak müşteri bilgilerini, ürün kataloğunu ve sipariş detaylarını saklamak. SQL sorguları ile veri çekme ve güncelleme işlemleri yapılır.
+        Örneğin, SELECT * FROM customers WHERE customer_id = 123 sorgusu ile belirli bir müşterinin bilgilerini çekmek.
+
+    NoSQL Veri Tabanı Kullanımı:
+        MongoDB kullanarak ürün değerlendirmeleri ve kullanıcı yorumlarını saklamak. JSON benzeri belgeler ile esnek veri modeli kullanılır.
+        Örneğin, bir ürün değerlendirmesi belgesi: { "product_id": "ABC123", "user_id": "user789", "rating": 5, "review": "Great product!" }
+
+    Nesne Yönelimli Veri Tabanı Kullanımı:
+        db4o kullanarak kullanıcı sepet verilerini saklamak ve nesne yönelimli programlama ile veri işlemlerini gerçekleştirmek.
+        Örneğin, bir kullanıcı sepet nesnesi: Cart { user_id: "user123", items: [Item { product_id: "ABC123", quantity: 2 }] }
+
+    Veri Ambarı Kullanımı:
+        Amazon Redshift kullanarak satış verilerini tarihsel olarak saklamak ve iş zekası araçları ile analiz etmek.
+        Örneğin, SELECT product_id, SUM(quantity) FROM sales GROUP BY product_id sorgusu ile en çok satan ürünlerin analizi yapılabilir.
+
+Veri tabanı yöntemleri, verilerin yapısına, uygulamanın gereksinimlerine ve performans ihtiyaçlarına göre seçilerek kullanılır. 
+Bu yöntemlerin doğru kullanımı, veri yönetimi süreçlerini optimize eder ve iş süreçlerinin verimliliğini artırır.

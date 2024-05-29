@@ -1,0 +1,43 @@
+pip install pymongo
+
+from pymongo import MongoClient
+
+# MongoDB veri tabanına bağlan
+client = MongoClient("mongodb://localhost:27017/")
+db = client["your_database"]
+collection = db["product_reviews"]
+
+# Ürün değerlendirmesi ekleme fonksiyonu
+def add_review(product_id, user_id, rating, review):
+    review_document = {
+        "product_id": product_id,
+        "user_id": user_id,
+        "rating": rating,
+        "review": review
+    }
+    collection.insert_one(review_document)
+    print("Review added.")
+
+# Ürün değerlendirmesi güncelleme fonksiyonu
+def update_review(product_id, user_id, rating, review):
+    query = {"product_id": product_id, "user_id": user_id}
+    new_values = {"$set": {"rating": rating, "review": review}}
+    collection.update_one(query, new_values)
+    print("Review updated.")
+
+# Ürün değerlendirmesi sorgulama fonksiyonu
+def get_reviews(product_id):
+    reviews = collection.find({"product_id": product_id})
+    for review in reviews:
+        print(review)
+
+# Örnek kullanımlar
+add_review("ABC123", "user789", 5, "Great product!")
+add_review("ABC123", "user456", 4, "Very good, but could be better.")
+
+update_review("ABC123", "user456", 4, "Very good, but the battery life could be better.")
+
+get_reviews("ABC123")
+
+# Bağlantıyı kapat
+client.close()

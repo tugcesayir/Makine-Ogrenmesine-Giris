@@ -1,0 +1,6 @@
+Python: Makine öğrenmesi için en popüler programlama dillerinden biri.
+
+    Scikit-Learn: Denetimli ve denetimsiz öğrenme için temel kütüphane.
+    TensorFlow: Derin öğrenme için geniş çapta kullanılan bir framework.
+    Keras: TensorFlow üzerine kurulmuş, kullanımı kolay bir derin öğrenme kütüphanesi.
+    PyTorch: Dinamik hesaplama grafikleriyle derin öğrenme için güçlü bir araç.

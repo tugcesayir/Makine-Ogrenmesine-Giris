@@ -1,0 +1,11 @@
+Denetimli Öğrenme (Supervised Learning): Model, etiketlenmiş veri setleri ile eğitilir. Girdi (input) ve çıktı (output) çiftleri kullanılarak modelin tahmin yapması öğretilir.
+
+    Örnek: Sınıflandırma (classification), regresyon (regression)
+
+Denetimsiz Öğrenme (Unsupervised Learning): Model, etiketlenmemiş veri setleri ile eğitilir ve verilerdeki gizli kalıpları bulmaya çalışır.
+
+    Örnek: Kümeleme (clustering), boyut indirgeme (dimensionality reduction)
+
+Pekiştirmeli Öğrenme (Reinforcement Learning): Model, bir ortamla etkileşimde bulunarak ve ödül (reward) geri bildirimi alarak öğrenir.
+
+    Örnek: Oyun oynama, robotik kontrol

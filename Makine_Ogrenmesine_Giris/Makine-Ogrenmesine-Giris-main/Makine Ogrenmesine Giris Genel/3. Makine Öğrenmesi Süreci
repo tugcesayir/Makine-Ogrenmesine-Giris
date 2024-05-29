@@ -1,0 +1,6 @@
+Veri Toplama: İlgili verilerin toplanması.
+Veri Temizleme ve Hazırlama: Verilerin analize uygun hale getirilmesi, eksik verilerin doldurulması veya temizlenmesi.
+Özellik Mühendisliği (Feature Engineering): Veri setindeki önemli özelliklerin seçilmesi veya yeni özellikler oluşturulması.
+Model Seçimi ve Eğitimi: Uygun makine öğrenmesi algoritmasının seçilmesi ve veriler üzerinde eğitilmesi.
+Model Değerlendirme: Modelin performansının değerlendirilmesi ve iyileştirilmesi.
+Modelin Kullanıma Sunulması: Eğitimli modelin gerçek dünyada kullanılması.
