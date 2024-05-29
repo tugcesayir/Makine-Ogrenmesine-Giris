@@ -1,0 +1,26 @@
+Sıra Desen Madenciliği (Sequential Pattern Mining), zamanla sıralı olarak gerçekleşen olaylar arasındaki desenleri ve ilişkileri bulmak için kullanılan bir veri madenciliği tekniğidir. Bu teknik, bir zaman serisi veri kümesindeki olayların belirli bir sıralama veya zaman aralığı içinde nasıl meydana geldiğini analiz eder. Sıra desen madenciliği genellikle zaman serisi verilerindeki davranışları anlamak ve öngörmek için kullanılır.
+Nasıl Çalışır?
+
+    Veri Hazırlığı: İlk adım, zamanla ilişkili olan verinin hazırlanmasıdır. Örneğin, bir perakende satış veri setinde, her bir işlem (ürün satın alma) bir zaman damgası ile ilişkilendirilir.
+
+    Desen Madenciliği Algoritmalarının Uygulanması: Sıra desen madenciliği için çeşitli algoritmalar kullanılabilir. Bu algoritmalar, belirli bir zaman diliminde belirli bir deseni veya olayı içeren desenlerin keşfedilmesine odaklanır. En yaygın olarak kullanılan algoritmalar arasında GSP (Generalized Sequential Pattern), PrefixSpan ve SPADE bulunur.
+
+    Desenlerin Analizi: Algoritma, belirli bir sıralamada veya zaman aralığında meydana gelen desenleri belirler. Bu desenler, sıralı olayların birleşik oluşumlarını temsil eder ve bu olayların birbirleriyle ilişkili olduğunu gösterir.
+
+    Desenlerin Yorumlanması: Elde edilen desenlerin analizi ve yorumlanması, anlamlı içgörüler elde etmek için önemlidir. Örneğin, perakende satış veri setinde belirli bir ürünün belirli bir zaman diliminde başka bir ürünle birlikte sıkça satın alındığını keşfetmek, kesişen talepleri belirlemek ve çapraz satış fırsatlarını tanımlamak için önemlidir.
+
+Avantajlar
+
+    Zamanla değişen veri setlerindeki desenleri ve trendleri belirlemek için etkilidir.
+    Perakende, finans, sağlık ve telekomünikasyon gibi birçok endüstride kullanılabilir.
+    Müşteri davranışlarını ve trendlerini anlamak için kullanılabilir.
+
+Dezavantajlar
+
+    Büyük veri setleri üzerinde çalışırken hesaplama açısından maliyetli olabilir.
+    Gürültülü veya eksik veriler, doğru desenlerin keşfedilmesini engelleyebilir.
+    İnsan müdahalesi ve uzmanlık gerektirebilir.
+
+Örnek Uygulama
+
+Bir online alışveriş sitesinde, bir kullanıcının belirli bir ürünü sepete ekledikten sonra hangi ürünleri daha sonra satın aldığını belirlemek için sıra desen madenciliği kullanılabilir. Bu, çapraz satış fırsatlarını belirlemek ve müşteri davranışlarını anlamak için değerli içgörüler sağlayabilir. Örneğin, bir müşteri bir cep telefonu satın aldıktan sonra genellikle bir telefon kılıfı veya ekran koruyucu satın alıyorsa, bu bilgi, müşteriye ilgili ürünleri önermek için kullanılabilir.
