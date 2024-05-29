@@ -1,0 +1,53 @@
+Destek Vektör Makineleri (SVM), sınıflandırma, regresyon ve ayırma problemlerini çözmek için kullanılan güçlü bir denetimli öğrenme algoritmasıdır. SVM, veri noktalarını birbirinden ayıran en iyi hiperdüzlemi (decision boundary) bulmaya odaklanır. Bu en iyi hiperdüzlem, veri noktalarını en iyi şekilde sınıflandıran veya regresyon problemlerinde en iyi şekilde ayıran bir hiperdüzlemdir.
+Çalışma Prensibi
+
+SVM'nin temel prensibi, sınıflar arasındaki en geniş marjı olan bir hiperdüzlemi bulmaktır. Marj, iki sınıf arasındaki en yakın veri noktalarının hiperdüzleme olan uzaklığıdır. SVM, bu en geniş marj hiperdüzlemi bulma görevini matematiksel olarak bir optimizasyon problemi olarak çözer.
+
+Sınıflar arasında doğrusal bir hiperdüzlem bulunamıyorsa, SVM, veri noktalarını yüksek boyutlu uzayda birbirinden ayıran bir dönüşüm kullanarak doğrusal bir hiperdüzlem bulmaya çalışır. Bu dönüşüm, çekirdek fonksiyonları aracılığıyla gerçekleştirilir. Popüler çekirdek fonksiyonları arasında doğrusal, polinomiyal ve RBF (Gaussian) çekirdekleri bulunur.
+Avantajlar
+
+    Yüksek boyutlu veri setleri üzerinde etkilidir, çünkü yalnızca destek vektörleri ile ilgilenir.
+    Hem sınıflandırma hem de regresyon problemleri için kullanılabilir.
+    Aşırı uydurma (overfitting) eğilimine karşı dirençlidir.
+    Esneklik: Farklı çekirdek fonksiyonları ve parametreler ile farklı problemlere uyarlanabilir.
+
+Dezavantajlar
+
+    Büyük veri setlerinde eğitim süresi uzun olabilir.
+    Hiperparametre ayarı gerektirebilir, yanlış parametreler doğru sonuçlar vermeyebilir.
+    Yüksek boyutlu ve gürültülü veri setlerinde performansı düşük olabilir.
+
+Örnek Uygulama: SVM ile İris Veri Seti Sınıflandırması
+
+"Iris" veri setindeki çiçek türlerini belirlemek için SVM algoritmasını kullanacağız.
+
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.svm import SVC
+from sklearn.metrics import accuracy_score, classification_report
+
+# Veri setini yükle
+iris = load_iris()
+X = iris.data
+y = iris.target
+
+# Veriyi eğitim ve test olarak böl
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Modeli oluştur ve eğit
+model = SVC(kernel='linear')  # Doğrusal çekirdek kullanıldı
+model.fit(X_train, y_train)
+
+# Test verileri üzerinde tahmin yap
+y_pred = model.predict(X_test)
+
+# Doğruluk skorunu hesapla
+accuracy = accuracy_score(y_test, y_pred)
+print(f"Accuracy: {accuracy:.2f}")
+
+# Sınıflandırma raporunu yazdır
+print("Classification Report:")
+print(classification_report(y_test, y_pred))
+
+
+Bu örnekte, "Iris" veri setini kullanarak bir SVM modeli oluşturuyoruz. Modeli eğittikten sonra test verileri üzerinde tahminler yaparız ve doğruluk skoru ile sınıflandırma raporunu görüntüleriz.
