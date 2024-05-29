@@ -1,8 +1,11 @@
-Entropi, bilgi teorisinde ve makine öğrenmesinde, bir veri kümesindeki belirsizlik veya düzensizliğin ölçüsüdür. Claude Shannon tarafından geliştirilen bu kavram, özellikle sınıflandırma problemlerinde karar ağaçları gibi algoritmalarda sıkça kullanılır.
+Entropi, bilgi teorisinde ve makine öğrenmesinde, bir veri kümesindeki belirsizlik veya düzensizliğin ölçüsüdür. 
+Claude Shannon tarafından geliştirilen bu kavram, özellikle sınıflandırma problemlerinde karar ağaçları gibi algoritmalarda sıkça kullanılır.
 
 ### Entropi Nedir?
 
-Entropi, bir veri kümesindeki bilgi miktarını veya veri kümesinin ne kadar düzensiz olduğunu ölçer. Entropi değeri, verinin homojen olup olmadığını anlamamıza yardımcı olur. Yüksek entropi, verinin çok düzensiz olduğunu ve bilgiyi iyi ayırt edemediğimizi gösterirken, düşük entropi, verinin daha düzenli ve daha tahmin edilebilir olduğunu gösterir.
+Entropi, bir veri kümesindeki bilgi miktarını veya veri kümesinin ne kadar düzensiz olduğunu ölçer. 
+Entropi değeri, verinin homojen olup olmadığını anlamamıza yardımcı olur. 
+Yüksek entropi, verinin çok düzensiz olduğunu ve bilgiyi iyi ayırt edemediğimizi gösterirken, düşük entropi, verinin daha düzenli ve daha tahmin edilebilir olduğunu gösterir.
 
 Entropi formülü şu şekildedir:
 
@@ -73,4 +76,6 @@ Bölme sonrası toplam entropiyi hesaplayalım:
 Bölme sonrası entropi (0.751), başlangıç entropisinden (0.971) düşüktür, bu da daha saf alt kümeler elde ettiğimiz anlamına gelir.
 
 ### Sonuç
-Entropi, veri kümesinin ne kadar belirsiz veya düzenli olduğunu anlamamıza yardımcı olan önemli bir ölçüttür. Karar ağaçları gibi algoritmalarda, entropi kullanılarak verinin bölünmesi ve daha homojen alt kümeler elde edilmesi sağlanır. Bu, modelin daha doğru tahminler yapmasını ve daha iyi performans göstermesini sağlar.
+Entropi, veri kümesinin ne kadar belirsiz veya düzenli olduğunu anlamamıza yardımcı olan önemli bir ölçüttür.
+Karar ağaçları gibi algoritmalarda, entropi kullanılarak verinin bölünmesi ve daha homojen alt kümeler elde edilmesi sağlanır.
+Bu, modelin daha doğru tahminler yapmasını ve daha iyi performans göstermesini sağlar.
