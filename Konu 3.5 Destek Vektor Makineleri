@@ -1,9 +1,13 @@
-Destek Vektör Makineleri (SVM), sınıflandırma, regresyon ve ayırma problemlerini çözmek için kullanılan güçlü bir denetimli öğrenme algoritmasıdır. SVM, veri noktalarını birbirinden ayıran en iyi hiperdüzlemi (decision boundary) bulmaya odaklanır. Bu en iyi hiperdüzlem, veri noktalarını en iyi şekilde sınıflandıran veya regresyon problemlerinde en iyi şekilde ayıran bir hiperdüzlemdir.
+Destek Vektör Makineleri (SVM), sınıflandırma, regresyon ve ayırma problemlerini çözmek için kullanılan güçlü bir denetimli öğrenme algoritmasıdır. 
+SVM, veri noktalarını birbirinden ayıran en iyi hiperdüzlemi (decision boundary) bulmaya odaklanır. 
+Bu en iyi hiperdüzlem, veri noktalarını en iyi şekilde sınıflandıran veya regresyon problemlerinde en iyi şekilde ayıran bir hiperdüzlemdir.
 Çalışma Prensibi
 
-SVM'nin temel prensibi, sınıflar arasındaki en geniş marjı olan bir hiperdüzlemi bulmaktır. Marj, iki sınıf arasındaki en yakın veri noktalarının hiperdüzleme olan uzaklığıdır. SVM, bu en geniş marj hiperdüzlemi bulma görevini matematiksel olarak bir optimizasyon problemi olarak çözer.
+SVM'nin temel prensibi, sınıflar arasındaki en geniş marjı olan bir hiperdüzlemi bulmaktır. 
+Marj, iki sınıf arasındaki en yakın veri noktalarının hiperdüzleme olan uzaklığıdır. SVM, bu en geniş marj hiperdüzlemi bulma görevini matematiksel olarak bir optimizasyon problemi olarak çözer.
 
-Sınıflar arasında doğrusal bir hiperdüzlem bulunamıyorsa, SVM, veri noktalarını yüksek boyutlu uzayda birbirinden ayıran bir dönüşüm kullanarak doğrusal bir hiperdüzlem bulmaya çalışır. Bu dönüşüm, çekirdek fonksiyonları aracılığıyla gerçekleştirilir. Popüler çekirdek fonksiyonları arasında doğrusal, polinomiyal ve RBF (Gaussian) çekirdekleri bulunur.
+Sınıflar arasında doğrusal bir hiperdüzlem bulunamıyorsa, SVM, veri noktalarını yüksek boyutlu uzayda birbirinden ayıran bir dönüşüm kullanarak doğrusal bir hiperdüzlem bulmaya çalışır.
+Bu dönüşüm, çekirdek fonksiyonları aracılığıyla gerçekleştirilir. Popüler çekirdek fonksiyonları arasında doğrusal, polinomiyal ve RBF (Gaussian) çekirdekleri bulunur.
 Avantajlar
 
     Yüksek boyutlu veri setleri üzerinde etkilidir, çünkü yalnızca destek vektörleri ile ilgilenir.
