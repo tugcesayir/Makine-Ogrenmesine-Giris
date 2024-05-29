@@ -1,0 +1,47 @@
+Sınıflandırma, bir veri örneğini belirli bir kategoriye veya sınıfa atama işlemidir. Temel amacı, veri setindeki desenleri ve ilişkileri analiz ederek, yeni gelen verileri önceden tanımlanmış sınıflar arasında doğru bir şekilde sınıflandırmaktır. Sınıflandırma, denetimli öğrenme kategorisine girer ve genellikle sınıflandırma modelleri olarak adlandırılan algoritmalar tarafından gerçekleştirilir.
+Sınıflandırma Türleri
+
+    İkili Sınıflandırma (Binary Classification): Veri örneğinin iki farklı sınıftan birine atanmasıdır. Örneğin, bir e-postanın spam veya spam olmadığını belirlemek gibi.
+
+    Çok Sınıflı Sınıflandırma (Multi-Class Classification): Veri örneğinin birden fazla sınıftan birine atanmasıdır. Örneğin, bir resmin bir köpek, kedi veya kuş gibi farklı nesnelere ait olup olmadığını belirlemek gibi.
+
+Sınıflandırma Algoritmaları
+
+    Destek Vektör Makineleri (Support Vector Machines - SVM): Belirli bir hiperdüzlemi oluşturarak sınıfları birbirinden ayırmaya çalışır.
+
+    Karar Ağaçları (Decision Trees): Karar ağacı yapısını kullanarak veri setindeki özelliklerin en belirgin özelliklerine göre sınıflandırma yapar.
+
+    Rastgele Ormanlar (Random Forests): Birçok karar ağacının bir araya gelerek oy birliğiyle sınıflandırma yapmasına dayanır.
+
+    Lojistik Regresyon (Logistic Regression): Bir veya birden fazla bağımsız değişkenin bir veya birden fazla bağımlı değişken üzerindeki etkisini inceleyerek sınıflandırma yapar.
+
+Örnek Uygulama: Lojistik Regresyon ile İkili Sınıflandırma
+
+Lojistik regresyon, ikili sınıflandırma problemlerini çözmek için yaygın olarak kullanılan bir algoritmadır. Aşağıdaki örnekte, "Iris" veri setindeki çiçek türlerini belirlemek için lojistik regresyon kullanılıyor.
+
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+
+# Veri setini yükle
+iris = load_iris()
+X = iris.data
+y = (iris.target == 0)  # "Setosa" çiçeği için ikili sınıflandırma
+
+# Veriyi eğitim ve test olarak böl
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Modeli oluştur ve eğit
+model = LogisticRegression()
+model.fit(X_train, y_train)
+
+# Test verileri üzerinde tahmin yap
+y_pred = model.predict(X_test)
+
+# Doğruluk skorunu hesapla
+accuracy = accuracy_score(y_test, y_pred)
+print(f"Accuracy: {accuracy:.2f}")
+
+
+Bu örnekte, "Iris" veri seti kullanılarak lojistik regresyon modeli oluşturulur ve eğitilir. Ardından, test verileri üzerinde tahminler yapılır ve doğruluk skoru hesaplanır. Bu doğruluk skoru, modelin doğru sınıflandırma oranını gösterir.
