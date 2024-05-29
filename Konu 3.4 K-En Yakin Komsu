@@ -1,11 +1,15 @@
-K-En Yakın Komşu (KNN), sınıflandırma ve regresyon problemlerini çözmek için kullanılan basit ve temel bir denetimli öğrenme algoritmasıdır. KNN algoritması, bir veri noktasını sınıflandırmak veya bir değer tahmin etmek için çevresindeki K en yakın komşusunun etiketlerine veya değerlerine dayanır. Temel fikir, bir noktanın etiketinin veya değerinin, o noktaya en yakın olan K komşusunun etiketlerinin veya değerlerinin ortalaması veya çoğunluğu olacağıdır.
+K-En Yakın Komşu (KNN), sınıflandırma ve regresyon problemlerini çözmek için kullanılan basit ve temel bir denetimli öğrenme algoritmasıdır.
+KNN algoritması, bir veri noktasını sınıflandırmak veya bir değer tahmin etmek için çevresindeki K en yakın komşusunun etiketlerine veya değerlerine dayanır. 
+Temel fikir, bir noktanın etiketinin veya değerinin, o noktaya en yakın olan K komşusunun etiketlerinin veya değerlerinin ortalaması veya çoğunluğu olacağıdır.
 KNN Algoritması
 
     Eğitim: KNN algoritması, eğitim veri setini sadece depolar, çünkü önceden eğitilmiş bir model oluşturmaz. Eğitim aşamasında, algoritma sadece veri noktalarını hafızasında saklar.
 
-    Tahmin: Bir tahmin yapmak istendiğinde, algoritma önce tahmin edilen noktanın çevresindeki en yakın K komşuyu bulur. Daha sonra, sınıflandırma için, bu K komşunun etiketlerinin veya regresyon için, bu K komşunun değerlerinin ortalamasını veya çoğunluğunu kullanarak tahmin yapar.
+    Tahmin: Bir tahmin yapmak istendiğinde, algoritma önce tahmin edilen noktanın çevresindeki en yakın K komşuyu bulur.
+Daha sonra, sınıflandırma için, bu K komşunun etiketlerinin veya regresyon için, bu K komşunun değerlerinin ortalamasını veya çoğunluğunu kullanarak tahmin yapar.
 
-    K Değeri Seçimi: KNN'de K parametresi, komşuların sayısını belirler. K değeri seçimi, modelin performansını ve genelleme yeteneğini önemli ölçüde etkileyebilir. Küçük bir K değeri, modelin eğitim verisine daha fazla uymasını sağlar, ancak aşırı uydurma riskini artırabilir. Büyük bir K değeri ise daha düzgün bir sınıflandırma yapabilir, ancak esnekliği azaltabilir.
+    K Değeri Seçimi: KNN'de K parametresi, komşuların sayısını belirler. K değeri seçimi, modelin performansını ve genelleme yeteneğini önemli ölçüde etkileyebilir.
+Küçük bir K değeri, modelin eğitim verisine daha fazla uymasını sağlar, ancak aşırı uydurma riskini artırabilir. Büyük bir K değeri ise daha düzgün bir sınıflandırma yapabilir, ancak esnekliği azaltabilir.
 
 Avantajlar
 
