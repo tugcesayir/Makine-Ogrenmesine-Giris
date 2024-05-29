@@ -1,53 +1,73 @@
 1. Veri ve Özellikler (Data and Features)
 
-    Veri (Data): Makine öğrenmesi modellerinin eğitimi ve test edilmesi için kullanılan bilgi setidir. Veri, genellikle yapılandırılmış (tablolar, veritabanları) veya yapılandırılmamış (metin, görüntü) biçiminde olabilir.
-    Özellikler (Features): Verilerdeki değişkenlerdir. Örneğin, bir ev fiyatı tahmin modeli için özellikler arasında evin metrekaresi, oda sayısı ve bulunduğu semt gibi faktörler yer alabilir. Özellik mühendisliği, bu değişkenlerin seçimi ve dönüştürülmesi sürecidir.
+    Veri (Data): Makine öğrenmesi modellerinin eğitimi ve test edilmesi için kullanılan bilgi setidir.
+Veri, genellikle yapılandırılmış (tablolar, veritabanları) veya yapılandırılmamış (metin, görüntü) biçiminde olabilir.
+    Özellikler (Features): Verilerdeki değişkenlerdir. Örneğin, bir ev fiyatı tahmin modeli için özellikler arasında evin metrekaresi, oda sayısı ve bulunduğu semt gibi faktörler yer alabilir. 
+Özellik mühendisliği, bu değişkenlerin seçimi ve dönüştürülmesi sürecidir.
 
 2. Eğitim ve Test Veri Setleri (Training and Testing Datasets)
 
     Eğitim Verisi (Training Data): Modelin öğrenmesi için kullanılan veri setidir. Bu verilerde, girdi (input) ve beklenen çıktı (output) bilgileri bulunur.
-    Test Verisi (Testing Data): Modelin doğruluğunu ve genelleme yeteneğini değerlendirmek için kullanılan, eğitim sürecinde kullanılmayan veri setidir. Test verisi, modelin yeni ve görülmemiş verilerle ne kadar iyi performans gösterdiğini ölçer.
+    Test Verisi (Testing Data): Modelin doğruluğunu ve genelleme yeteneğini değerlendirmek için kullanılan, eğitim sürecinde kullanılmayan veri setidir. 
+Test verisi, modelin yeni ve görülmemiş verilerle ne kadar iyi performans gösterdiğini ölçer.
 
 3. Model (Model)
 
-    Model: Verilerden öğrenen ve tahminler yapan matematiksel yapıdır. Modeller, çeşitli algoritmalar kullanılarak oluşturulur ve eğitilir. Örneğin, lineer regresyon modeli, destek vektör makineleri, karar ağaçları ve sinir ağları farklı model türleridir.
+    Model: Verilerden öğrenen ve tahminler yapan matematiksel yapıdır. Modeller, çeşitli algoritmalar kullanılarak oluşturulur ve eğitilir. 
+Örneğin, lineer regresyon modeli, destek vektör makineleri, karar ağaçları ve sinir ağları farklı model türleridir.
 
 4. Hedef Değişken (Target Variable)
 
-    Hedef Değişken (Target Variable): Modelin tahmin etmeye çalıştığı değişkendir. Denetimli öğrenmede, bu değişken eğitim verisinde etiketlenmiş olarak bulunur. Örneğin, bir ev fiyatı tahmin modelinde hedef değişken evin fiyatıdır.
+    Hedef Değişken (Target Variable): Modelin tahmin etmeye çalıştığı değişkendir. Denetimli öğrenmede, bu değişken eğitim verisinde etiketlenmiş olarak bulunur. 
+Örneğin, bir ev fiyatı tahmin modelinde hedef değişken evin fiyatıdır.
 
 5. Kayıp Fonksiyonu (Loss Function)
 
-    Kayıp Fonksiyonu (Loss Function): Modelin tahminlerinin doğruluğunu ölçmek için kullanılan fonksiyondur. Bu fonksiyon, gerçek değerler ile modelin tahmin ettiği değerler arasındaki farkı ölçer. Amaç, bu farkı minimize etmektir. Yaygın kayıp fonksiyonları arasında ortalama karesel hata (Mean Squared Error, MSE) ve çapraz entropi (Cross-Entropy) bulunur.
+    Kayıp Fonksiyonu (Loss Function): Modelin tahminlerinin doğruluğunu ölçmek için kullanılan fonksiyondur.
+Bu fonksiyon, gerçek değerler ile modelin tahmin ettiği değerler arasındaki farkı ölçer. Amaç, bu farkı minimize etmektir.
+Yaygın kayıp fonksiyonları arasında ortalama karesel hata (Mean Squared Error, MSE) ve çapraz entropi (Cross-Entropy) bulunur.
 
 6. Optimizasyon Algoritmaları (Optimization Algorithms)
 
-    Optimizasyon Algoritmaları: Modelin kayıp fonksiyonunu minimize etmek için kullanılan yöntemlerdir. Bu algoritmalar, model parametrelerini ayarlayarak en iyi performansı elde etmeyi amaçlar. Yaygın optimizasyon algoritmaları arasında gradyan inişi (Gradient Descent) ve türevleri (Stochastic Gradient Descent, SGD) bulunur.
+    Optimizasyon Algoritmaları: Modelin kayıp fonksiyonunu minimize etmek için kullanılan yöntemlerdir. 
+Bu algoritmalar, model parametrelerini ayarlayarak en iyi performansı elde etmeyi amaçlar. 
+Yaygın optimizasyon algoritmaları arasında gradyan inişi (Gradient Descent) ve türevleri (Stochastic Gradient Descent, SGD) bulunur.
 
 7. Genelleme (Generalization)
 
-    Genelleme (Generalization): Modelin, eğitim verisi dışında kalan yeni ve görülmemiş verilerde de iyi performans gösterme yeteneğidir. İyi bir genelleme, modelin aşırı öğrenim (overfitting) ve eksik öğrenim (underfitting) problemlerini minimize etmesi anlamına gelir.
+    Genelleme (Generalization): Modelin, eğitim verisi dışında kalan yeni ve görülmemiş verilerde de iyi performans gösterme yeteneğidir. 
+İyi bir genelleme, modelin aşırı öğrenim (overfitting) ve eksik öğrenim (underfitting) problemlerini minimize etmesi anlamına gelir.
 
 8. Aşırı Öğrenim ve Eksik Öğrenim (Overfitting and Underfitting)
 
-    Aşırı Öğrenim (Overfitting): Modelin eğitim verisine çok iyi uyum sağlarken, test verisinde zayıf performans göstermesi durumudur. Bu, modelin eğitim verisindeki gürültü ve ayrıntılara aşırı derecede uyum sağladığı anlamına gelir.
-    Eksik Öğrenim (Underfitting): Modelin eğitim verisine yeterince uyum sağlayamaması ve hem eğitim hem de test verisinde zayıf performans göstermesi durumudur. Bu, modelin yeterince karmaşık olmadığını ve verilerdeki kalıpları yakalayamadığını gösterir.
+    Aşırı Öğrenim (Overfitting): Modelin eğitim verisine çok iyi uyum sağlarken, test verisinde zayıf performans göstermesi durumudur.
+Bu, modelin eğitim verisindeki gürültü ve ayrıntılara aşırı derecede uyum sağladığı anlamına gelir.
+    Eksik Öğrenim (Underfitting): Modelin eğitim verisine yeterince uyum sağlayamaması ve hem eğitim hem de test verisinde zayıf performans göstermesi durumudur. 
+Bu, modelin yeterince karmaşık olmadığını ve verilerdeki kalıpları yakalayamadığını gösterir.
 
 9. Çapraz Doğrulama (Cross-Validation)
 
-    Çapraz Doğrulama (Cross-Validation): Modelin performansını değerlendirmek ve genelleme yeteneğini ölçmek için kullanılan bir tekniktir. En yaygın yöntemi k-katlı çapraz doğrulama (k-fold cross-validation) olup, veri seti k eşit parçaya bölünür ve her parça bir kez test verisi olarak kullanılırken kalan k-1 parça eğitim verisi olarak kullanılır.
+    Çapraz Doğrulama (Cross-Validation): Modelin performansını değerlendirmek ve genelleme yeteneğini ölçmek için kullanılan bir tekniktir. 
+En yaygın yöntemi k-katlı çapraz doğrulama (k-fold cross-validation) olup, veri seti k eşit parçaya bölünür ve her parça bir kez test verisi olarak kullanılırken 
+kalan k-1 parça eğitim verisi olarak kullanılır.
 
 10. Hiperparametreler ve Model Ayarlaması (Hyperparameters and Model Tuning)
 
-    Hiperparametreler (Hyperparameters): Modelin öğrenme sürecinde kullanılan, ancak doğrudan eğitim verisinden öğrenilmeyen parametrelerdir. Örneğin, öğrenme oranı (learning rate) ve karar ağacının derinliği hiperparametrelerdir.
-    Model Ayarlaması (Model Tuning): Hiperparametrelerin en iyi değerlerini belirlemek için yapılan işlemdir. Bu, modelin performansını artırmak için önemlidir ve genellikle grid search veya random search gibi yöntemlerle yapılır.
+    Hiperparametreler (Hyperparameters): Modelin öğrenme sürecinde kullanılan, ancak doğrudan eğitim verisinden öğrenilmeyen parametrelerdir. 
+Örneğin, öğrenme oranı (learning rate) ve karar ağacının derinliği hiperparametrelerdir.
+    Model Ayarlaması (Model Tuning): Hiperparametrelerin en iyi değerlerini belirlemek için yapılan işlemdir. 
+Bu, modelin performansını artırmak için önemlidir ve genellikle grid search veya random search gibi yöntemlerle yapılır.
 
 11. Performans Ölçütleri (Performance Metrics)
 
-    Performans Ölçütleri: Modelin başarımını değerlendirmek için kullanılan kriterlerdir. Sınıflandırma problemleri için doğruluk (accuracy), kesinlik (precision), geri çağırma (recall) ve F1 skoru yaygın metriklerdir. Regresyon problemleri için ise ortalama mutlak hata (Mean Absolute Error, MAE) ve ortalama karesel hata (Mean Squared Error, MSE) kullanılır.
+    Performans Ölçütleri: Modelin başarımını değerlendirmek için kullanılan kriterlerdir. 
+Sınıflandırma problemleri için doğruluk (accuracy), kesinlik (precision), geri çağırma (recall) ve F1 skoru yaygın metriklerdir.
+Regresyon problemleri için ise ortalama mutlak hata (Mean Absolute Error, MAE) ve ortalama karesel hata (Mean Squared Error, MSE) kullanılır.
 
 12. Regularizasyon (Regularization)
 
-    Regularizasyon: Modelin aşırı öğrenimden kaçınması için kullanılan tekniklerdir. Regularizasyon yöntemleri, modelin karmaşıklığını kontrol ederek genelleme yeteneğini artırmayı amaçlar. L1 ve L2 regularizasyon (lasso ve ridge regresyon) yaygın yöntemlerdir.
+    Regularizasyon: Modelin aşırı öğrenimden kaçınması için kullanılan tekniklerdir.
+Regularizasyon yöntemleri, modelin karmaşıklığını kontrol ederek genelleme yeteneğini artırmayı amaçlar. L1 ve L2 regularizasyon (lasso ve ridge regresyon) yaygın yöntemlerdir.
 
-Bu temel kavramlar, makine öğrenmesinin işleyişini ve farklı problemleri çözme yöntemlerini anlamak için kritik öneme sahiptir. Bu kavramların anlaşılması, daha ileri seviye tekniklerin ve algoritmaların etkin bir şekilde uygulanmasını sağlar.
+Bu temel kavramlar, makine öğrenmesinin işleyişini ve farklı problemleri çözme yöntemlerini anlamak için kritik öneme sahiptir. 
+Bu kavramların anlaşılması, daha ileri seviye tekniklerin ve algoritmaların etkin bir şekilde uygulanmasını sağlar.
