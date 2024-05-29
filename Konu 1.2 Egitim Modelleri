@@ -1,0 +1,67 @@
+Makine öğrenmesi modelleri, belirli veri türlerini analiz etmek ve tahminler yapmak için kullanılan matematiksel ve istatistiksel algoritmalardır. Modellerin eğitimi, bu algoritmaların verilere uyum sağlaması ve bu verilerden öğrenmesi sürecidir. Eğitim sürecinde, model veri örneklerini kullanarak kalıpları ve ilişkileri öğrenir. Makine öğrenmesi modelleri genel olarak üç ana kategoriye ayrılır: denetimli öğrenme, denetimsiz öğrenme ve pekiştirmeli öğrenme.
+1. Denetimli Öğrenme (Supervised Learning) Modelleri
+
+Denetimli öğrenmede, modelin eğitim verisi hem girdileri (özellikler) hem de çıktıları (etiketler) içerir. Model, girdilerden çıktıları tahmin etmeyi öğrenir. Denetimli öğrenme iki alt kategoriye ayrılır: sınıflandırma ve regresyon.
+Sınıflandırma (Classification)
+
+Sınıflandırma modelleri, verileri belirli kategorilere ayırmak için kullanılır.
+
+    Örnek: E-posta sınıflandırması (spam veya spam değil).
+
+Model Örneği: Karar Ağaçları (Decision Trees)
+Karar ağaçları, veriyi dallara ayırarak kararlar verir. Her düğüm bir özelliği, her dal bir karar kuralını ve her yaprak düğümü bir sınıfı temsil eder.
+
+Örnek:
+Bir müşteri e-posta sınıflandırma modelinde, özellikler arasında "e-posta uzunluğu" ve "anahtar kelimelerin sayısı" olabilir. Karar ağacı bu özelliklere göre "spam" veya "spam değil" sınıflarına ayırır.
+Regresyon (Regression)
+
+Regresyon modelleri, sürekli bir hedef değişkeni tahmin etmek için kullanılır.
+
+    Örnek: Ev fiyatı tahmini.
+
+Model Örneği: Lineer Regresyon (Linear Regression)
+Lineer regresyon, bağımsız değişkenler (özellikler) ile bağımlı değişken (hedef) arasında doğrusal bir ilişki kurar.
+
+Örnek:
+Bir ev fiyatı tahmin modeli, özellikler arasında "metrekare", "oda sayısı" ve "yaş" gibi faktörleri kullanarak evin fiyatını tahmin eder. Bu özellikler bir doğrusal denklemde yer alır.
+2. Denetimsiz Öğrenme (Unsupervised Learning) Modelleri
+
+Denetimsiz öğrenmede, model yalnızca girdileri kullanarak öğrenir ve veri üzerinde gizli kalıpları keşfetmeye çalışır. Bu tür öğrenme, verileri gruplara ayırma veya boyutlarını azaltma gibi görevler için kullanılır.
+Kümeleme (Clustering)
+
+Kümeleme modelleri, veri noktalarını benzer özelliklere sahip gruplara ayırır.
+
+    Örnek: Müşteri segmentasyonu.
+
+Model Örneği: K-Means Kümeleme (K-Means Clustering)
+K-Means algoritması, veri noktalarını K sayıda küme merkezine (centroid) en yakın olacak şekilde gruplar.
+
+Örnek:
+Bir müşteri segmentasyon modeli, özellikler arasında "yaş", "yıllık gelir" ve "harcama skoru" kullanarak müşterileri benzer özelliklere sahip gruplara ayırır.
+Boyut İndirgeme (Dimensionality Reduction)
+
+Boyut indirgeme modelleri, veri setindeki özellik sayısını azaltarak daha basit bir temsil oluşturur.
+
+    Örnek: Görüntü sıkıştırma.
+
+Model Örneği: Principal Component Analysis (PCA)
+PCA, yüksek boyutlu veriyi daha az sayıda ana bileşenle ifade eder, böylece veri daha yönetilebilir hale gelir.
+
+Örnek:
+Bir görüntü sıkıştırma modelinde, orijinal görüntü pikselleri ana bileşenlerle temsil edilir. Bu bileşenler, görüntünün büyük bir kısmını birkaç sayısal değerle özetler.
+3. Pekiştirmeli Öğrenme (Reinforcement Learning) Modelleri
+
+Pekiştirmeli öğrenmede, model bir ortamla etkileşimde bulunur ve bu etkileşimlerden aldığı geri bildirimlere (ödüller veya cezalar) göre öğrenir. Bu tür öğrenme, sıralı karar alma problemlerinde kullanılır.
+Örnek: Q-Learning
+
+Q-Learning, bir ajanın belirli bir durumda hangi eylemi yapması gerektiğini öğrenmesi için kullanılan bir algoritmadır. Ajan, her eylem için bir ödül alır ve bu ödülleri maksimize etmeye çalışır.
+
+Örnek:
+Bir robotun bir labirentten çıkış yolunu bulması. Robot her adımda bir durum (konum) ve bir eylem (ilerleme yönü) seçer. Eğer robot doğru yöne ilerlerse bir ödül alır, yanlış yöne giderse bir ceza alır. Robot bu ödül ve cezaları kullanarak labirentten en hızlı şekilde çıkmayı öğrenir.
+Özet
+
+    Denetimli Öğrenme: Eğitim verisi etiketli. Sınıflandırma (karar ağaçları, lojistik regresyon) ve regresyon (lineer regresyon).
+    Denetimsiz Öğrenme: Eğitim verisi etiketli değil. Kümeleme (K-Means, DBSCAN) ve boyut indirgeme (PCA, t-SNE).
+    Pekiştirmeli Öğrenme: Model, ortamla etkileşimde bulunur ve ödüller/cezalar ile öğrenir. (Q-Learning, Deep Q-Networks).
+
+Her bir model ve algoritma, belirli veri türlerine ve problemlerine uygun çözümler sunar. Makine öğrenmesi modellerinin doğru seçimi ve uygulanması, projenin başarısı için kritik öneme sahiptir.
