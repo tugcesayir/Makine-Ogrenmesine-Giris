@@ -1,0 +1,58 @@
+pip install mysql-connector-python
+
+import mysql.connector
+
+# MySQL veri tabanına bağlan
+conn = mysql.connector.connect(
+    host="localhost",
+    user="your_username",
+    password="your_password",
+    database="your_database"
+)
+cursor = conn.cursor()
+
+# Müşteri tablosunu oluştur
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS customers (
+    customer_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    age INT
+)
+""")
+
+# Müşteri ekleme fonksiyonu
+def add_customer(name, email, age):
+    sql = "INSERT INTO customers (name, email, age) VALUES (%s, %s, %s)"
+    val = (name, email, age)
+    cursor.execute(sql, val)
+    conn.commit()
+    print(cursor.rowcount, "record inserted.")
+
+# Müşteri güncelleme fonksiyonu
+def update_customer(customer_id, name, email, age):
+    sql = "UPDATE customers SET name=%s, email=%s, age=%s WHERE customer_id=%s"
+    val = (name, email, age, customer_id)
+    cursor.execute(sql, val)
+    conn.commit()
+    print(cursor.rowcount, "record(s) affected")
+
+# Müşteri sorgulama fonksiyonu
+def get_customer(customer_id):
+    sql = "SELECT * FROM customers WHERE customer_id=%s"
+    cursor.execute(sql, (customer_id,))
+    result = cursor.fetchone()
+    print(result)
+
+# Örnek kullanımlar
+add_customer("John Doe", "john@example.com", 30)
+add_customer("Jane Smith", "jane@example.com", 25)
+
+update_customer(1, "John Doe", "john.doe@example.com", 31)
+
+get_customer(1)
+get_customer(2)
+
+# Bağlantıyı kapat
+cursor.close()
+conn.close()
