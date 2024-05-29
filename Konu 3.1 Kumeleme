@@ -1,13 +1,19 @@
-Kümeleme, bir veri kümesindeki benzer özelliklere sahip veri noktalarını gruplara ayırma işlemidir. Amacı, veri noktalarını homojen alt kümelerde toplamak ve bu grupları oluştururken birbirinden farklılıkları maksimum seviyede azaltmaktır. Kümeleme, veri keşfi, veri azaltma, pazar segmentasyonu, sosyal ağ analizi, biyoinformatik ve daha birçok alanda kullanılır.
+Kümeleme, bir veri kümesindeki benzer özelliklere sahip veri noktalarını gruplara ayırma işlemidir.
+Amacı, veri noktalarını homojen alt kümelerde toplamak ve bu grupları oluştururken birbirinden farklılıkları maksimum seviyede azaltmaktır.
+Kümeleme, veri keşfi, veri azaltma, pazar segmentasyonu, sosyal ağ analizi, biyoinformatik ve daha birçok alanda kullanılır.
 Kümeleme Türleri
 
-    Hierarchical (Hiyerarşik) Kümeleme: Bu yöntem, her veri noktasını bir küme olarak başlatır ve daha sonra benzer kümeleme yöntemleri aracılığıyla birleştirir veya böler. Bu yöntemde, her bir veri noktası ve kümeleme işlemi bir ağaç yapısı içinde temsil edilir.
+    Hierarchical (Hiyerarşik) Kümeleme: Bu yöntem, her veri noktasını bir küme olarak başlatır ve daha sonra benzer kümeleme yöntemleri aracılığıyla birleştirir veya böler.
+Bu yöntemde, her bir veri noktası ve kümeleme işlemi bir ağaç yapısı içinde temsil edilir.
 
-    Partitional (Bölümsel) Kümeleme: Bu yöntem, veri kümesini önceden belirlenmiş bir sayıda küme veya bölüme ayırır. Veri noktaları, kümelere atanır ve her bir küme, belirli bir kriteri (genellikle uzaklık ölçüsü) en uygun şekilde optimize etmek için yeniden düzenlenir.
+    Partitional (Bölümsel) Kümeleme: Bu yöntem, veri kümesini önceden belirlenmiş bir sayıda küme veya bölüme ayırır. 
+Veri noktaları, kümelere atanır ve her bir küme, belirli bir kriteri (genellikle uzaklık ölçüsü) en uygun şekilde optimize etmek için yeniden düzenlenir.
 
-    Density-Based (Yoğunluk Temelli) Kümeleme: Bu yöntem, veri noktalarını birbiriyle yoğunluğa dayalı olarak gruplar. Bir noktanın yoğunluğu, belirli bir çekim alanındaki diğer noktaların sayısına dayanır. Bu yöntem, küme şekillerinin daha esnek olmasını sağlar.
+    Density-Based (Yoğunluk Temelli) Kümeleme: Bu yöntem, veri noktalarını birbiriyle yoğunluğa dayalı olarak gruplar. 
+Bir noktanın yoğunluğu, belirli bir çekim alanındaki diğer noktaların sayısına dayanır. Bu yöntem, küme şekillerinin daha esnek olmasını sağlar.
 
-    Grid-Based (Izgara Temelli) Kümeleme: Bu yöntem, veri uzayını bir ızgara şeklinde böler ve her bir hücreyi bir küme olarak kabul eder. Bu yöntem, veri kümesinin boyutunu ve boyutunu dikkate alır ve bu nedenle büyük veri kümeleri için etkilidir.
+    Grid-Based (Izgara Temelli) Kümeleme: Bu yöntem, veri uzayını bir ızgara şeklinde böler ve her bir hücreyi bir küme olarak kabul eder. 
+Bu yöntem, veri kümesinin boyutunu ve boyutunu dikkate alır ve bu nedenle büyük veri kümeleri için etkilidir.
 
 Kümeleme Uygulamaları
 
@@ -18,7 +24,10 @@ Görüntü Tanıma: Benzer özelliklere sahip pikselleri bir araya getirerek, g�
 Sosyal Ağ Analizi: Sosyal medya verilerini analiz ederek, kullanıcıları belirli gruplara veya topluluklara atama.
 Örnek Uygulama: K-Means Kümeleme
 
-K-Means kümeleme, en yaygın kullanılan partitional kümeleme yöntemlerinden biridir. Bu yöntem, veri kümesini belirli bir sayıda küme veya kategoriye böler. İşlem, belirlenen küme sayısına göre başlangıçta rasgele yerleştirilen küme merkezlerinden başlar. Ardından, her veri noktası en yakın küme merkezine atanır ve küme merkezleri, veri noktalarının ortalama konumuna göre güncellenir. Bu süreç, küme merkezleri sabitlenene veya belirli bir iterasyon sayısına ulaşılana kadar tekrarlanır.
+K-Means kümeleme, en yaygın kullanılan partitional kümeleme yöntemlerinden biridir. Bu yöntem, veri kümesini belirli bir sayıda küme veya kategoriye böler. 
+İşlem, belirlenen küme sayısına göre başlangıçta rasgele yerleştirilen küme merkezlerinden başlar. 
+Ardından, her veri noktası en yakın küme merkezine atanır ve küme merkezleri, veri noktalarının ortalama konumuna göre güncellenir. 
+Bu süreç, küme merkezleri sabitlenene veya belirli bir iterasyon sayısına ulaşılana kadar tekrarlanır.
 
 from sklearn.cluster import KMeans
 from sklearn.datasets import make_blobs
@@ -41,4 +50,5 @@ plt.scatter(centers[:, 0], centers[:, 1], marker='*', s=300, c='red', label='Cen
 plt.legend()
 plt.show()
 
-Bu örnekte, make_blobs() fonksiyonuyla birlikte rastgele veri noktaları oluşturulur ve KMeans algoritması kullanılarak bu veri noktaları dört küme arasında kümeleştirilir. Küme merkezleri ve kümeleme sonuçları, görselleştirilir.
+Bu örnekte, make_blobs() fonksiyonuyla birlikte rastgele veri noktaları oluşturulur ve KMeans algoritması kullanılarak bu veri noktaları dört küme arasında kümeleştirilir. 
+Küme merkezleri ve kümeleme sonuçları, görselleştirilir.
